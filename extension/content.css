@@ -1,0 +1,41 @@
+.ytc-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 12px;
+  margin-left: 8px;
+  border: none;
+  border-radius: 16px;
+  background: var(--yt-spec-badge-chip-background, rgba(0, 0, 0, 0.05));
+  color: var(--yt-spec-text-primary, #0f0f0f);
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 32px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.1s ease, opacity 0.1s ease;
+}
+
+.ytc-copy-btn:hover:not(:disabled) {
+  background: var(--yt-spec-button-chip-background-hover, rgba(0, 0, 0, 0.1));
+}
+
+.ytc-copy-btn:focus-visible {
+  outline: 2px solid var(--yt-spec-call-to-action, #065fd4);
+  outline-offset: 2px;
+}
+
+.ytc-copy-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.ytc-copy-btn[data-state="ok"] {
+  color: var(--yt-spec-call-to-action, #065fd4);
+}
+
+.ytc-copy-btn[data-state="error"] {
+  color: var(--yt-spec-brand-button-background, #cc0000);
+}

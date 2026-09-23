@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "YT Transcript Copy",
+  "version": "1.0.0",
+  "description": "Adds a Copy button to YouTube's transcript panel. Copies the transcript as plain text, no timestamps.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
